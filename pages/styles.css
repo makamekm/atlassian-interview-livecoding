@@ -1,0 +1,21 @@
+.item-tree {
+    margin-left: 10px;
+}
+
+.item.active {
+    color: red;
+}
+
+.item:focus {
+    color: blue;
+}
+
+.space-x-5 {
+    margin-left: -3px;
+    margin-right: -3px;
+}
+
+.space-x-5 > * {
+    margin-left: 3px;
+    margin-right: 3px;
+}
