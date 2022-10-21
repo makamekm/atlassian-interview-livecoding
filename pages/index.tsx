@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { ExtendedSummary } from '../components/ExtendedSummary';
+import { FeedbackDialog } from '../components/FeedbackDialog';
 import { ListTree } from '../components/ListTree';
 import { DataItem, SELECTED_ID } from '../components/types';
 import { DataItemDto, fetchData } from '../resources/data';
@@ -63,6 +65,9 @@ export default function Home() {
     <div className="container">
       {!isLoading && errorMessage && <>errorMessage</>}
       {isLoading && data ? <>Loading</> : <ListTree data={data} />}
+
+      <ExtendedSummary />
+      <FeedbackDialog />
       
       <style jsx>{`
         .container {
