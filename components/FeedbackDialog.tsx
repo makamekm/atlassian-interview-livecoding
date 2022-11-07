@@ -6,7 +6,7 @@ export const FeedbackDialog: React.FC<{
 }> = React.memo(({ className }) => {
     const [isFFEnabled, isLoadingFF] = useFF("feedback-dialog", true);
 
-    return !isFFEnabled || isLoadingFF ? null : <div className={className}>
+    return (!isFFEnabled || isLoadingFF) ? null : <div className={className}>
         Feedback Dialog Feature
     </div>
 });
